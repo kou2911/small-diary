@@ -13,8 +13,8 @@
             <li><%=link_to "トップ",root_path%></li>
             <li><%=link_to "small-diaryとは","#"%></li>
             <li><%=link_to "使い方","#"%></li>
-            <li><%=link_to "新規登録","#"%></li>
-            <li><%=link_to "ログイン", "#"%></li>
+            <li><%=link_to "新規登録",new_user_registration_path%></li>
+            <li><%=link_to "ログイン", user_session_path%></li>
         </ul>
     </nav>
  </div>
@@ -30,7 +30,7 @@
  <%=image_tag "cat_girl.png"%>
 
  <div class=" absolute inset-y-0 right-28 top-1/2 font-mono text-center text-xl ">
- <%= link_to 'dairyを始める',  "#", id: "registrations"%>
+ <%= link_to 'dairyを始める',  new_user_registration_path, id: "registrations"%>
  </div>
 </div>
 
