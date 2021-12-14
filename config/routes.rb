@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  root to: 'diarys#index'
+  root to: 'diaries#index'
 end
