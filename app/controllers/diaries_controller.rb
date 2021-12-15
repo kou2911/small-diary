@@ -4,7 +4,8 @@ class DiariesController < ApplicationController
   def index
   end
 
-  def new    
+  def new
   end
-  
+
+
 end
