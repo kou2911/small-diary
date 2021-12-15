@@ -1,26 +1,5 @@
-<div class = "bg-yellow-50">
- <body class= "header">
- <div class ="toggle" id="toggle">
-    <div class ="toggle-box" id="toggle-box">
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
- </div>
- <div class="nav-content"id="nav-content">
-    <nav>
-        <ul>
-            <li><%=link_to "トップ",root_path%></li>
-            <li><%=link_to "small-diaryとは","#"%></li>
-            <li><%=link_to "使い方","#"%></li>
-            <li><%=link_to "新規登録",new_user_registration_path%></li>
-            <li><%=link_to "ログイン", user_session_path%></li>
-        </ul>
-    </nav>
- </div>
- <div class=" font-mono text-xl fixed p-4 " id="main">
-   <%=link_to "small-diary" ,root_path  %>  
-  </div>
+ <%= render "header" %>
+
  <div class="text-lg  text-center mb-7 pt-7">
     小さな思い出を日記にしませんか?
  </div>
@@ -39,4 +18,5 @@
 </div>
 
  <%= link_to 'dairyを始める',  new_diary_path , id: "registrations"%>
+<%=link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout"%>
 

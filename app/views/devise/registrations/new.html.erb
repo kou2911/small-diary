@@ -1,28 +1,9 @@
-<body class= "header">
- <div class ="toggle" id="toggle">
-    <div class ="toggle-box" id="toggle-box">
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
- </div>
- <div class="nav-content"id="nav-content">
-    <nav>
-        <ul>
-            <li><%=link_to "トップ",root_path%></li>
-            <li><%=link_to "small-diaryとは","#"%></li>
-            <li><%=link_to "使い方","#"%></li>
-            <li><%=link_to "新規登録",new_user_registration_path%></li>
-            <li><%=link_to "ログイン", user_session_path%></li>
-        </ul>
-    </nav>
-</div>
-<div class="font-mono text-xl fixed p-4 " id="main">
-  <%=link_to "small-diary" ,root_path  %>  
-  </div>
+ <%= render "diaries/header" %>
+
  <div class="text-lg  text-center pb-7 pt-7 bg-yellow-50">
     さあ、小さな日記をはじめよう
 </div>
+
 
 
 <%= form_with model: @user, url: user_registration_path, class: ' relative  flex flex-col pt-7 bg-yellow-50 ', local: true do |f| %>
