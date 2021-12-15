@@ -8,15 +8,19 @@
 <div  class=" relative bg-yellow-200  w-full rounded-full">
  <%=image_tag "cat_girl.png"%>
 
- <div class=" absolute inset-y-0 right-28 top-1/2 font-mono text-center text-xl ">
- <%= link_to 'dairyを始める',  new_user_registration_path, id: "registrations"%>
- </div>
+<% if user_signed_in?%>
+  <div class=" absolute inset-y-0 right-28 top-1/2 font-mono text-center text-xl ">
+  <%= link_to 'dairyを始める',  new_diary_path , id: "registrations"%>
+  </div>
+<% else %>
+  <div class=" absolute inset-y-0 right-28 top-1/2 font-mono text-center text-xl ">
+  <%= link_to 'dairyを始める',  new_user_registration_path, id: "registrations"%>
+  </div>
+ <% end %>
 </div>
 
  </body>
 
 </div>
 
- <%= link_to 'dairyを始める',  new_diary_path , id: "registrations"%>
-<%=link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout"%>
 
