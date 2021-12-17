@@ -43,8 +43,12 @@
      <%= f.submit "Create Account", class: 'flex mt-6 items-center justify-center focus:outline-none text-black text-sm  sm:text-base  bg-yellow-50  hover:bg-yellow-500 rounded-2xl py-2 w-full transition duration-150 ease-in  uppercase cursor-pointer'%>
     </div>
 
-    <div class="text-center pt-12 pb-12">
-        <p>既にアカウントを持っている方はこちらから <a href="register.html" class=" underline font-semibold">Register here.</a></p>
+    <div class="pl-8 pt-12 pb-12 flex">
+        既にアカウントをお持ち方は
+        <div class =" underline decoration-rose-700">
+        <%=link_to "こちら",user_session_path %>
+        </div>
+        から。
     </div>
 
    </div>
