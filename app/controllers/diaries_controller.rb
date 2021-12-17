@@ -5,6 +5,7 @@ class DiariesController < ApplicationController
   end
 
   def new
+    
   end
 
 
