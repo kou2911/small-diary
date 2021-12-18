@@ -9,13 +9,9 @@
    <%=image_tag "cat_girl.png"%>
 
   <% if user_signed_in?%>
-    <div class=" absolute inset-y-0 right-28 top-1/2 font-mono text-center text-xl ">
-    <%= link_to 'dairyを始める',  new_diary_path , id: "registrations"%>
-    </div>
+    <%= link_to '今日を投稿する',  new_diary_path ,class:'text-xl absolute top-96 right-40  font-mono ' %>
   <% else %>
-    <div class=" absolute inset-y-0 right-28 top-1/2 font-mono text-center text-xl ">
-    <%= link_to 'dairyを始める',  new_user_registration_path, id: "registrations"%>
-    </div>
+    <%= link_to 'dairyを始める',  new_user_registration_path, class: "absolute top-96 right-40  font-mono text-center text-xl "%>
   <% end %>
  </div>
 </div>
