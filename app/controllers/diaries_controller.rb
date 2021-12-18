@@ -18,7 +18,7 @@ class DiariesController < ApplicationController
     end
   end
 
-  private
+  private 
 
   def diary_params
     params.require(:diary).permit(:image,:content,:place).merge(user_id: current_user.id)
