@@ -1,0 +1,31 @@
+<div class = "bg-yellow-50">
+ <div class ="toggle" id="toggle">
+    <div class ="toggle-box" id="toggle-box">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+ </div>
+ <div class="nav-content"id="nav-content">
+    <nav>
+        <ul>
+       <% if user_signed_in?%>
+            <li><%=link_to "トップ",root_path%></li>
+            <li><%=link_to "small-diaryとは","#"%></li>
+            <li><%=link_to "使い方","#"%></li>
+            <li><%=link_to "今日を投稿する",new_diary_path%></li>
+            <li><%=link_to "ログアウト", destroy_user_session_path, method: :delete%></li>
+          <% else %>
+            <li><%=link_to "トップ",root_path%></li>
+            <li><%=link_to "small-diaryとは","#"%></li>
+            <li><%=link_to "使い方","#"%></li>
+            <li><%=link_to "新規登録",new_user_registration_path%></li>
+            <li><%=link_to "ログイン", user_session_path%></li>
+           <% end %>
+        </ul>
+    </nav>
+ </div>
+ <div class=" font-mono text-xl fixed p-6 " id="main">
+   <%=link_to "small-diary" ,root_path  %>  
+  </div>
+</div>

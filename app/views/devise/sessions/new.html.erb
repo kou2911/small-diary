@@ -1,26 +1,6 @@
-<body class= "header">
- <div class ="toggle" id="toggle">
-    <div class ="toggle-box" id="toggle-box">
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
- </div>
- <div class="nav-content"id="nav-content">
-    <nav>
-        <ul>
-            <li><%=link_to "トップ",root_path%></li>
-            <li><%=link_to "small-diaryとは","#"%></li>
-            <li><%=link_to "使い方","#"%></li>
-            <li><%=link_to "新規登録",new_user_registration_path%></li>
-            <li><%=link_to "ログイン", user_session_path%></li>
-        </ul>
-    </nav>
-</div>
-<div class="font-mono text-xl fixed p-4 " id="main">
-  <%=link_to "small-diary" ,root_path  %> 
- </div>
- <div class="text-lg  text-center pb-7 pt-7 bg-yellow-50">
+ <%= render "diaries/header" %>
+
+ <div class="text-lg  text-center pb-6 pt-6 bg-yellow-50">
     おかえりなさい
 </div>
 
@@ -33,6 +13,7 @@
  <div class=" font-light self-center mb-8 text-3xl">
        ログイン
    </div>
+   <%= render 'shared/error_messages', model: f.object %>
   <div class='login-flash-message'>
     <%= flash[:notice] %>
     <%= flash[:alert] %>
@@ -48,8 +29,12 @@
    <div class='flex w-full'>
      <%= f.submit "Create Account", class: 'flex mt-8 items-center justify-center focus:outline-none text-black text-sm  sm:text-base  bg-yellow-50  hover:bg-yellow-500 rounded-2xl py-2 w-full transition duration-150 ease-in  uppercase cursor-pointer'%>
     </div>
-        <div class="text-center pt-12 pb-12">
-        <p>まだアカウントを持っていない方はこちら <a href="register.html" class=" underline font-semibold">Register here.</a></p>
+    <div class="pl-8 pt-12 pb-12 flex">
+        まだアカウントを持ってない方は
+        <div class =" underline decoration-rose-700">
+        <%=link_to "こちら",new_user_registration_path %>
+        </div>
+        から。
     </div>
 
   </div>
