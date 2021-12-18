@@ -18,6 +18,10 @@ class DiariesController < ApplicationController
     end
   end
 
+  def show
+    @diarys = Diary.all.order(created_at: :desc)
+  end
+
   private
 
   def diary_params
