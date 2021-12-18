@@ -6,6 +6,7 @@ class DiariesController < ApplicationController
 
   def new
     @diary = Diary.new
+    @date = Date.current.strftime("%Y年 %m月 %d日")
   end
 
   def create
