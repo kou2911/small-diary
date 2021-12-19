@@ -1,7 +1,29 @@
+ <%= render "diaries/header" %>
 
 
-<%=@nickname%>
+ <div class="text-lg  text-center pb-6 pt-6 bg-yellow-50 ">
+    <%="ここが#{@nickname}の日記です"%>
+ </div>
+<div class="bg-yellow-50 h-screen">
+  <ul class="p-8 grid grid-cols-4 gap-4 bg-yellow-50  ">
+    <% @diaries.each do |diary| %>
+      <div class="text-center bg-yellow-200 rounded-md ">
+        <%=diary.created_at.strftime('%Y/%m/%d')%>
+         <div class="text-sm">
+            <li><%="出来事 : #{diary.content}"%></li>
+            <li><%="場所 : #{diary.place}"%><li>
+         </div>
+         <div class ="pl-8">
+          <% if diary.image.blank? %>
+            <%=image_tag "cake.png" ,class:"w-44 "%> 
+              <% else %>
+               <%=image_tag diary.image, class:"w-44 "%>
+          <% end %>
+        </div>
+      </div>
+   <% end %>
+ </ul>
+</div>
 
-<% @diaries.each do |diary| %>
-  <%=diary.content%>
-<% end %>
+
+
