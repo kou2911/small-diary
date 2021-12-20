@@ -20,6 +20,7 @@
                <%=image_tag diary.image, class:"w-44 "%>
           <% end %>
         </div>
+        <%=link_to "編集",edit_diary_path(diary.id),id: "edit"%>
       </div>
     <% end %>
  </ul>
