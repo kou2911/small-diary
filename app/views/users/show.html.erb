@@ -1,3 +1,4 @@
+ 
  <%= render "diaries/header" %>
 
 
@@ -17,14 +18,14 @@
           <% if diary.image.blank? %>
             <%=image_tag "sleep.png" ,class:"w-44 "%> 
               <% else %>
-               <%=image_tag diary.image, class:"w-44 "%>
+               <%=image_tag diary.image.variant(resize: '176x176'), class:"w-44 "%>
           <% end %>
         </div>
-        <%=link_to "編集",edit_diary_path(diary.id),id: "edit"%>
+        <div class=" text-right">
+        <%=link_to "編集",edit_diary_path(diary.id),class: 'font-sans pr-3 text-sm hover:underline'%>
+        </div>
       </div>
     <% end %>
  </ul>
 </div>
-
-
 
