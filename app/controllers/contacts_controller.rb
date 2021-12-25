@@ -22,4 +22,3 @@ class ContactsController < ApplicationController
       params.require(:contact).permit(:name, :content)
     end
 end
-end
