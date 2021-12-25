@@ -1,4 +1,4 @@
 class Contact < ApplicationRecord
   validates :name, presence: true
-  validates :content, presence: true
+  validates :memo, presence: true
 end
