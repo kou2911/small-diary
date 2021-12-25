@@ -1,41 +1,41 @@
+ <%= render "diaries/header" %>
+
+
+ <div class="text-lg  text-center pb-6 pt-6 bg-yellow-50">
+    お問い合わせフォーム
+</div>
+
+
 <%= form_with(model: @contact, local: true) do |f| %>
-    <div class='form-wrap'>
-      <div class='form-header'>
-        <h5 class='form-header-text'>
-          お問い合わせフォーム
-        </h5>
-      </div>
+<% flash.each do |key, value| %>
+      <p class = 'alert alert-<%= key %>'><%= value %></p>
+    <% end %>
+<div class="bg-yellow-50 py-6 sm:py-8 lg:py-12">
+  <div class="max-w-screen-2xl px-4 md:px-8 mx-auto">
+    <div class="mb-10 md:mb-16">
+      <h2 class="text-gray-800 text-2xl lg:text-3xl font-bold text-center mb-4 md:mb-6">お問い合わせ</h2>
+
+      <p class="max-w-screen-md text-gray-500 md:text-lg text-center mx-auto">このサービスのバグや、改善点、こんな機能が欲しい、どんな内容でも結構です!<br>あなたの声をお聞かせください。</p>
     </div>
-    <div class="correct-msg-box">
-      <% if @contact.errors.any? %>
-        <div id="error_explanation">
-          <ul><% @contact.errors.full_messages.each do |message| %>
-            <li><%= message %></li>
-            <% end %>
-          </ul>
-        </div>
-      <% end %>
-      <div class="correct-msg-main">
-        <div class="contact-form">
-            <div class="correct-text-field">
-              <%= f.label "お名前" %>
-              <%= f.text_field :name, placeholder: "お名前", class: "input-form" %>
-            </div>
-            <div class="correct-text-field">
-              <%= f.label "お問合せ内容" %>
-              <%= f.text_area :memo, placeholder: "お問合せ内容を入力してください", class: "input-form" %>
-            </div>
-            <div class="send-btn-contents">
-              <div class="register-btn">
-                <%= f.button type: "submit", class:"register-red-btn", style:'border-style: none;' do %> 
-                  送信 <i class="fas fa-paper-plane"></i>
-                <% end %>
-              </div>
-              <div class="register-btn">
-                <%= link_to "もどる", root_path, class:"register-red-btn", style:"background-color: #aaa" %>
-              </div>
-            </div>
-        </div>
+    <div class="max-w-screen-md grid sm:grid-cols-2 gap-4 mx-auto">
+         <%= render 'shared/error_messages', model: f.object %>
+
+
+      <div class="sm:col-span-2">
+        <%= f.text_field :name, placeholder: "お名前", class: "w-full bg-gray-50 text-gray-800 border focus:ring ring-indigo-300 rounded outline-none transition duration-100 px-3 py-2" %>
       </div>
+
+      <div class="sm:col-span-2 ">
+        <%= f.text_area :memo, placeholder: "お問合せ内容を入力してください", class: "w-full h-64 bg-gray-50 text-gray-800 border focus:ring ring-indigo-300 rounded outline-none transition duration-100 px-3 py-2" %>
+      </div>
+
+       <%= f.button type: "submit", class:"inline-block bg-yellow-200 hover:bg-yellow-500 active:bg-indigo-700 focus-visible:ring ring-indigo-300 text-white text-sm md:text-base font-semibold text-center rounded-lg outline-none transition duration-100 px-8 py-3" do %> 
+            送信 
+        <% end %>
+
+    </div>
   </div>
+</div>
+
 <% end %>
+
