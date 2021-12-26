@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :diary do
-    content         { Faker::Lorem.sentence }
+    content         {Faker::Lorem.word }
     place           { Faker::Address.street_name}
     association :user
 
