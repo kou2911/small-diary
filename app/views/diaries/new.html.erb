@@ -25,16 +25,18 @@
               <%= render 'shared/error_messages', model: f.object %>
             <div class="w-full">
                <div class="font-bold h-6 mb-1 mt-3 text-gray-600 text-base leading-8 uppercase"><span class="text-red-400 ">*</span> 思い出</div>
-                <%= f.text_area :content, class:"p-1 px-2 appearance-none outline-none w-full text-gray-800", id:"cat-name", placeholder:"友達とばったりあった。", maxlength:"15" %>
+                <%= f.text_area :content, class:"p-1 px-2 appearance-none outline-none w-full text-gray-800", id:"diary-content", placeholder:"友達とばったりあった。", maxlength:"15" %>
+                <span class="text-right text-sm text-gray-600", id="word-count">/15</span>
             </div>
             <div class="w-full">
                <div class="font-bold h-6 mb-1 mt-8 text-gray-600 text-base leading-8 uppercase"><span class="text-red-400 ">*</span> 場所</div>
-                <%= f.text_area :place, class:"p-1 px-2 appearance-none outline-none w-full text-gray-800", id:"cat-name", placeholder:"いつものコンビニ", maxlength:"30" %> 
+                <%= f.text_area :place, class:"p-1 px-2 appearance-none outline-none w-full text-gray-800", id:"diary-place", placeholder:"いつものコンビニ", maxlength:"30" %> 
+                <span class="text-right text-sm text-gray-600", id ="place-count">/30</span>
             </div>
 
             <div class="w-full">
                <div class="font-bold h-6 mb-1 mt-8 text-gray-600 text-base leading-8 uppercase"> 写真(任意)</div>
-              <%= f.file_field :image, id:"item-image" %>
+              <%= f.file_field :image, id:"diary-image" %>
             </div>
 
 
