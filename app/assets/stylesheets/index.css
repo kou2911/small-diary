@@ -1,5 +1,4 @@
 
-/*ハンバーガーメニュー*/
 header{
   background-color:#f6f5ef ;
   text-align:left;
@@ -16,14 +15,12 @@ margin: 0;
 position: fixed;
 }
 
-/* 位置を右上に固定 */
 .toggle {
   position: fixed;
   top: 25px;
   right: 25px;
 }
 
-/* ハンバーガーメニューの大きさ指定 */
 .toggle-box {
   position: relative;
   width: 36px;
@@ -120,4 +117,3 @@ transform: translateX(0);
 .overlay {
 height: 100vh;
 }
-/*ハンバーガーメニュー*/
