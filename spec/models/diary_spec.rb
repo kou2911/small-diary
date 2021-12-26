@@ -51,22 +51,5 @@ RSpec.describe Diary, type: :model do
         expect(@diary.errors.full_messages).to include("場所は30文字以内で入力してください")
       end
     end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   end
 end

@@ -28,6 +28,9 @@ ja:
       diary:
         content: 内容
         place: 場所
+      contact:
+        genre_id: ジャンル
+        memo: 内容
     models:
       user: ユーザー
   devise:
