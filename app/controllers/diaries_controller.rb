@@ -1,6 +1,5 @@
 class DiariesController < ApplicationController
-  before_action :authenticate_user!, only: [:new,:create]
-
+  before_action :authenticate_user!, only: [:new,:create,:edit,:update]
 
   def index
   end
@@ -13,7 +12,7 @@ class DiariesController < ApplicationController
   def create
     @diary = Diary.new(diary_params)
     if @diary.save
-      redirect_to root_path
+      redirect_to user_path(current_user.id)
     else
       render :new
     end
@@ -27,7 +26,7 @@ class DiariesController < ApplicationController
     @diaries = current_user.diaries.find(params[:id])
     @diary = Diary.find(params[:id])
     if @diary.update(diary_params)
-      redirect_to user_path(@diaries.id)
+      redirect_to user_path(@current_user.id)
     else
       render :edit
       
