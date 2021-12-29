@@ -97,7 +97,7 @@ RSpec.describe "Diaries", type: :system do
       #トップページに遷移する
       visit root_path
       #投稿一覧のボタンがないことを確認する
-      expect(find('.toggle-box').click)
+      find('.toggle-box').click
       expect(page).to have_no_content('投稿一覧')
 
     end

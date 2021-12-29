@@ -41,7 +41,7 @@ RSpec.describe "Users", type: :system do
       #トップページに移動する
       visit root_path
       #トップページに新規登録ページに遷移するボタンがあることを確認する
-      expect(find('.toggle-box').click)
+      find('.toggle-box').click
       expect(page).to have_content('新規登録')
       #新規登録ページに移動する
       visit new_user_registration_path
@@ -64,7 +64,7 @@ RSpec.describe "Users", type: :system do
       #トップページに移動する
       visit root_path
       #トップページにログインページに遷移するボタンがあることを確認する
-      expect(find('.toggle-box').click)
+      find('.toggle-box').click
       expect(page).to have_content('ログイン')
       #ログインページに移動する
       visit  new_user_session_path
@@ -82,7 +82,7 @@ RSpec.describe "Users", type: :system do
     #トップページに遷移する
     visit root_path
     #トップページにログインページに遷移するボタンがあることを確認する
-    expect(find('.toggle-box').click)
+    find('.toggle-box').click
     expect(page).to have_content('ログイン')
     #ログインページに移動する
     visit new_user_session_path
