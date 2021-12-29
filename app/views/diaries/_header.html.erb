@@ -8,7 +8,7 @@
  </div>
  <div class="nav-content"id="nav-content">
     <nav>
-        <ul>
+        <ul id ="content-nav">
        <% if user_signed_in?%>
             <li><%=link_to "トップ",root_path%></li>
             <li><%=link_to "日記一覧","/users/#{current_user.id}"%></li>

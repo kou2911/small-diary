@@ -15,15 +15,16 @@
    </div>
    <%= render 'shared/error_messages', model: f.object %>
   <div class='login-flash-message'>
+    <%= render 'shared/error_messages', model: f.object %>
     <%= flash[:notice] %>
     <%= flash[:alert] %>
   </div>
   <div class="flex flex-col pt-4">
-      <label class="mb-1 text-xs tracking-wide text-gray-600">メールアドレス</label>
+      <label class="mb-1 text-xs tracking-wide text-gray-600" for="email">メールアドレス</label>
     <%= f.email_field :email, class:"shadow appearance-none border rounded w-full py-2 px-3 bg-yellow-50 mt-1 leading-tight focus:outline-none focus:shadow-outline", id:"email", placeholder:"PC・携帯どちらでも可", autofocus: true %>
   </div>
   <div class="flex flex-col pt-4">
-      <label class="mb-1 text-xs tracking-wide text-gray-600">パスワード</label>
+      <label class="mb-1 text-xs tracking-wide text-gray-600" for="password">パスワード</label>
     <%= f.password_field :password, class:"shadow appearance-none border rounded w-full py-2 px-3 bg-yellow-50 mt-1 leading-tight focus:outline-none focus:shadow-outline", id:"password", placeholder:"" %>
   </div>
    <div class='flex w-full'>
