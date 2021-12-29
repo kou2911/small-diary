@@ -3,6 +3,7 @@ require 'rails_helper'
 RSpec.describe "Users", type: :system do
   before do
     @user_second = FactoryBot.build(:user)
+    @user = FactoryBot.create(:user)
   end
 
   context 'ユーザー新規登録ができる時' do
@@ -60,8 +61,6 @@ RSpec.describe "Users", type: :system do
 
   context 'ユーザーログインができる時' do
     it '正しい情報を入力すればユーザーログインができトップページに遷移する'do
-      #予め、ユーザーをDBに保存する
-      @user = FactoryBot.create(:user)
       #トップページに移動する
       visit root_path
       #トップページにログインページに遷移するボタンがあることを確認する
@@ -80,8 +79,6 @@ RSpec.describe "Users", type: :system do
   end
   context 'ユーザーログインができない時' do
     it '誤った情報を入力すればユーザーログインができずログインページのままになる' do
-    #予め、ユーザーをDBに保存する
-    @user = FactoryBot.create(:user)
     #トップページに遷移する
     visit root_path
     #トップページにログインページに遷移するボタンがあることを確認する
