@@ -6,7 +6,7 @@
     <%="ここが#{@nickname}さんの日記です"%>
  </div>
 <div class="bg-yellow-50 h-screen">
-  <ul class="p-8 grid grid-cols-4 gap-4 bg-yellow-50  ">
+  <ul class="p-8 grid grid-cols-5 gap-5 bg-yellow-50  ">
     <% @diaries.each do |diary| %>
       <div class="text-center bg-yellow-200 rounded-md pt-3 mt-4">
         <%=diary.created_at.strftime('%Y/%m/%d')%>
