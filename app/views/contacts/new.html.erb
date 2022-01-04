@@ -1,7 +1,7 @@
  <%= render "diaries/header" %>
 
 
- <div class="text-lg  text-center pb-6 pt-6 bg-yellow-50">
+ <div class=" pl-4 pb-2  sm:text-lg sm:pb-10 sm:pt-6 text-sm pb-10 pt-6  text-center bg-yellow-50 ">
     お問い合わせフォーム
 </div>
 
@@ -27,7 +27,7 @@
       </div>
 
       <div class="sm:col-span-2 ">
-        <%= f.text_area :memo, placeholder: "お問合せ内容を入力してください", class: "w-full h-64 bg-gray-50 text-gray-800 border focus:ring ring-indigo-300 rounded outline-none transition duration-100 px-3 py-2",maxlength:"150" %>
+        <%= f.text_area :memo, placeholder: "お問合せ内容を入力してください", class: "w-full h-44 sm:h-64 bg-gray-50 text-gray-800 border focus:ring ring-indigo-300 rounded outline-none transition duration-100 px-3 py-2",maxlength:"150" %>
       </div>
 
        <%= f.submit type: "submit", class:"inline-block bg-yellow-200 hover:bg-yellow-500 active:bg-indigo-700 focus-visible:ring ring-indigo-300 text-white text-sm md:text-base font-semibold text-center rounded-lg outline-none transition duration-100 px-8 py-3" do %> 

@@ -1,6 +1,6 @@
  <%= render "diaries/header" %>
 
- <div class="text-lg  text-center pb-6 pt-6 bg-yellow-50">
+ <div class=" pl-4 pb-2  sm:text-lg sm:pb-10 sm:pt-6 text-sm pb-10 pt-6  text-center bg-yellow-50 ">
     さあ、小さな日記をはじめよう
 </div>
 
@@ -13,7 +13,7 @@
  <div class="min-h-screen flex flex-col items-center justify-center bg-yellow-50">
 
 
-  <div class="flex flex-col bg-yellow-200  shadow-md px-4 sm:px-6 md:px-8 lg:px-10 py-8 rounded-3xl w-50 max-w-md">
+  <div class="flex flex-col bg-yellow-200 w-4/5 shadow-md px-4 sm:px-6 md:px-8 lg:px-10 py-8 rounded-3xl w-50 max-w-md">
 
     <div class=" font-light self-center  text-3xl">
        新規登録
@@ -32,7 +32,7 @@
   <div class="flex flex-col pt-4">
       <label class="mb-1 text-xs tracking-wide text-gray-600" for = "password">パスワード:</label>
       <%= f.password_field :password, class:"shadow appearance-none border rounded w-full py-2 px-3 bg-yellow-50 mt-1 leading-tight focus:outline-none focus:shadow-outline", id:"password", placeholder:"6文字以上の半角英数字" %>
-     <p class='text-sm'>※英字と数字の両方を含めて設定してください</p>
+     <p class='text-xs pt-2 sm:text-sm'>※英字と数字の両方を含めて設定してください</p>
   </div>
   <div class="flex flex-col pt-4">
       <label class="mb-1 text-xs tracking-wide text-gray-600" for ="password-confirmation">パスワード(確認):</label>
@@ -43,7 +43,7 @@
      <%= f.submit "Create Account", class: 'flex mt-6 items-center justify-center focus:outline-none text-black text-sm  sm:text-base  bg-yellow-50  hover:bg-yellow-500 rounded-2xl py-2 w-full transition duration-150 ease-in  uppercase cursor-pointer'%>
     </div>
 
-    <div class="pl-8 pt-12 pb-12 flex">
+    <div class="text-xs pt-10 pl-8 sm:pl-8 sm:pt-12 sm:pb-12 flex">
         既にアカウントをお持ち方は
         <div class =" underline decoration-rose-700">
         <%=link_to "こちら",user_session_path %>
@@ -53,10 +53,10 @@
 
    </div>
   </div>
-<div class = " absolute bottom-20 left-20 w-48 bottom-10 bg-yellow-200 rounded-full">
+<div class = " absolute w-4/12 -bottom-4 left-2 sm:bottom-20 sm:left-20 sm:w-48 sm:bottom-10 lg:bg-yellow-200 rounded-full">
  <%=image_tag "fan.png"%>
 </div>
-<div class="absolute  top-20 right-20 w-48 bg-yellow-200 rounded-full">
+<div class="absolute w-4/12 top-4 right-8 sm:top-20  sm:right-20 sm:w-48 lg:bg-yellow-200 rounded-full">
  <%=image_tag "umbrella.png"%>
  </div>
  <% end %>
