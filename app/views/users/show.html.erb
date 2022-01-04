@@ -2,27 +2,27 @@
  <%= render "diaries/header" %>
 
 
- <div class="text-lg  text-center pb-6 pt-6 bg-yellow-50 ">
+ <div class="lg:text-lg lg:pb-10 lg:pt-6 text-xs pb-10 pt-6  text-center bg-yellow-50">
     <%="ここが#{@nickname}さんの日記です"%>
  </div>
 <div class="bg-yellow-50 h-screen">
-  <ul class="p-8 grid lg:grid-cols-5 lg:gap-5 bg-yellow-50  md:grid-cols-4 md:gap-4 sm:grid-cols-4 md:gap-4">
+  <ul class=" p-8 grid grid-cols-1  lg:grid-cols-5 lg:gap-5 bg-yellow-50  md:grid-cols-4 md:gap-4 sm:grid-cols-3 sm:gap-3">
     <% @diaries.each do |diary| %>
       <div class="text-center bg-yellow-200 rounded-md pt-3 mt-4">
         <%=diary.created_at.strftime('%Y/%m/%d')%>
-         <div class="text-sm">
+         <div class="lg:text-sm">
             <li><%="出来事 : #{diary.content}"%></li>
             <li><%="場所 : #{diary.place}"%><li>
          </div>
-         <div class ="lg:pl-10  md:pl-5 md:pt-2 sm:pl-2 sm:pt-2">
+         <div class =" pl-20 pt-4 lg:pl-10  md:pl-5 md:pt-2 sm:pl-8 sm:pt-2">
           <% if diary.image.blank? %>
-            <%=image_tag "sleep.png" ,class:"lg:w-44 md:w-32 sm:w-28"%> 
+            <%=image_tag "sleep.png" ,class:"w-32 lg:w-44 md:w-32 sm:w-28"%> 
               <% else %>
-               <%=image_tag diary.image.variant(resize: '176x176'), class:" lg:w-44 md:w-32 sm:w-28"%>
+               <%=image_tag diary.image.variant(resize: '176x176'), class:" w-32 lg:w-44 md:w-32 sm:w-28"%>
           <% end %>
         </div>
         <div class=" text-right">
-        <%=link_to "編集",edit_diary_path(diary.id),id:'diary-edit',class: 'font-sans pr-3 text-sm hover:underline'%>
+        <%=link_to "編集",edit_diary_path(diary.id),id:'diary-edit',class: ' text-base pr-8 font-sans lg:pr-3 lg:text-sm hover:underline'%>
         </div>
       </div>
     <% end %>

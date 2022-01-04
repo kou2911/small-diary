@@ -1,48 +1,48 @@
  <%= render "header" %>
 
- <div class="lg:text-lg lg:pb-10 lg:pt-6 text-sm pb-10 pt-6  text-center bg-yellow-50 md:text-base ">
+ <div class=" pl-4 pb-2  sm:text-lg sm:pb-10 sm:pt-6 text-sm pb-10 pt-6  text-center bg-yellow-50 ">
     今日の思い出を投稿しよう
  </div>
 
 
   <%= form_with model: @diary, url: diaries_path, class:" bg-yellow-50 h-screen w-screen ", local: true do |f| %>
 
- <div class="mx-auto max-w-6xl p-12 pt-10">
+ <div class="mx-auto max-w-6xl p-6  sm:p-12 sm:pt-10">
    <div class="flex flex-col md:flex-row ">
-      <div class="md:w-1/2 max-w-md flex flex-col ">
+      <div class="md:w-1/2 max-w-md flex flex-col md:mr-4 sm:ml-10 ">
          <div class="  text-center lg:text-4xl text-xl font-black uppercase lg:mt-10 md:mt-20">
          <%= @date%>
          </div>
-         <div class="  text-center text-xl my-4 ">どんなに小さな思い出でも大丈夫。</div>
-      <div class ="bg-yellow-200 rounded-full ">
+         <div class="  text-center sm:text-xl  my-4 ">どんなに小さな思い出でも大丈夫。</div>
+      <div class ="bg-yellow-200 rounded-full w-28  md:w-full ">
        <%=image_tag "pc.png"%>
      </div>
   </div>
 
 
-      <div class=" lg:w-1/2 flex  mr-8 mt-5 justify-end w-full md:mr-0 ">
-         <div class="shadow-md flex-auto max-w-sm  p-10 pb-20 bg-yellow-200 -mb-8 rounded-lg ">
+      <div class=" md:w-1/2 flex justify-end w-full md:ml-20 md:mr-0 sm:mr-8 sm:mt-5 ">
+         <div class="w-1/12 shadow-md flex-auto p-5 pb-20 mt-4 md:max-w-sm md:pb-20 md:p-10  bg-yellow-200 md:-mb-8 rounded-lg sm:p-5 sm:pb-20">
               <%= render 'shared/error_messages', model: f.object %>
             <div class="w-full">
-               <div class="font-bold h-6 mb-1 mt-3 text-gray-600 text-base leading-8 uppercase"><span class="text-red-400 ">*</span> 思い出</div>
-                <%= f.text_area :content, class:"p-1 px-2 appearance-none outline-none w-full text-gray-800", id:"diary-content", placeholder:"友達とばったりあった。", maxlength:"15" %>
+               <div class="font-bold -mt-2 md:h-6 md:mb-1 md:mt-3 text-gray-600 lg:text-base leading-8 uppercase"><span class="text-red-400 ">*</span> 思い出</div>
+                <%= f.text_area :content, class:"md:p-1 md:px-2 appearance-none outline-none w-full text-gray-800", id:"diary-content", placeholder:"友達とばったりあった。", maxlength:"15" %>
                 <span class="text-right text-sm text-gray-600", id="word-count">/15</span>
             </div>
             <div class="w-full">
-               <div class="font-bold h-6 mb-1 mt-8 text-gray-600 text-base leading-8 uppercase"><span class="text-red-400 ">*</span> 場所</div>
-                <%= f.text_area :place, class:"p-1 px-2 appearance-none outline-none w-full text-gray-800", id:"diary-place", placeholder:"いつものコンビニ", maxlength:"30" %> 
+               <div class="font-bold md:h-6 md:mb-1 md:mt-8 text-gray-600 text-base leading-8 uppercase"><span class="text-red-400 ">*</span> 場所</div>
+                <%= f.text_area :place, class:"p-1 px-2 appearance-none outline-none w-full  text-gray-800", id:"diary-place", placeholder:"いつものコンビニ", maxlength:"30" %> 
                 <span class="text-right text-sm text-gray-600", id ="place-count">/30</span>
             </div>
 
             <div class="w-full">
-               <div class="font-bold h-6 mb-1 mt-8 text-gray-600 text-base leading-8 uppercase"> 写真(任意)</div>
+               <div class="font-bold h-6 mb-4 md:mb-1 md:mt-8 text-gray-600 text-base leading-8 uppercase sm:mb-4"> 写真(任意)</div>
               <%= f.file_field :image, id:"diary-image" %>
             </div>
 
 
             <div class="mt-8 relative">
-              <%= f.submit "投稿する", class: 'shadow-md font-medium py-4 px-4 text-gray-600
-                  cursor-pointer bg-yellow-50 rounded text-lg tr-mt  absolute text-center w-full hover:bg-yellow-500'%>
+              <%= f.submit "投稿する", class: 'shadow-md font-medium md:py-4 md:px-4 text-gray-600
+                  cursor-pointer bg-yellow-50 rounded text-lg tr-mt  absolute text-center w-full hover:bg-yellow-500 sm:p-4'%>
             </div>
          </div>
       </div>
