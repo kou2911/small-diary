@@ -4,14 +4,14 @@
     小さな思い出を日記にしませんか?
  </div>
 
-<div class="bg-yellow-50 h-screen">
+<div class="bg-yellow-50 h-full">
  <div  class=" relative  bg-yellow-200 m-auto w-9/12 rounded-full">
    <%=image_tag "cat_girl.png"%>
 
   <% if user_signed_in?%>
-    <%= link_to '今日を投稿する',  new_diary_path ,class:'absolute text-xs right-4 top-14 lg:text-2xl  lg:top-96 lg:right-40 md:text-base md:top-56 md:right-10 sm:top-32 sm:right-8 sm:text-sm font-mono hover:underline ' %>
+    <%= link_to '今日を投稿する',  new_diary_path ,class:'absolute text-xs right-4 top-14 lg:text-2xl  lg:top-96 lg:right-1/5 md:text-base md:top-56 md:right-10 sm:top-32 sm:right-8 sm:text-sm font-mono hover:underline ' %>
   <% else %>
-    <%= link_to 'dairyを始める',  new_user_registration_path, class: "absolute text-xs right-4 top-14 lg:text-2xl  lg:top-96 lg:right-40 md:text-base md:top-56 md:right-10 sm:top-32 sm:right-8 sm:text-sm font-mono hover:underline"%>
+    <%= link_to 'dairyを始める',  new_user_registration_path, class: "absolute text-xs right-4 top-14 lg:text-2xl  lg:top-96 lg:right-1/5 md:text-base md:top-56 md:right-10 sm:top-32 sm:right-8 sm:text-sm font-mono hover:underline"%>
   <% end %>
  </div>
 </div>
