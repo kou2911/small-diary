@@ -10,9 +10,9 @@
     <% @diaries.each do |diary| %>
       <div class="text-center bg-yellow-200 rounded-md pt-3 mt-4">
         <%=diary.created_at.strftime('%Y/%m/%d')%>
-         <div class="lg:text-sm">
-            <li><%="出来事 : #{diary.content}"%></li>
-            <li><%="場所 : #{diary.place}"%><li>
+         <div class="lg:text-sm md:text-xs mt-3 lg:leading-relaxed">
+            <li><%="content: #{diary.content}"%></li>
+            <li><%="place: #{diary.place}"%><li>
          </div>
           <% if diary.image.blank? %>
             <%=image_tag "sleep.png" ,class:"w-32 lg:w-44 md:w-32 sm:w-28 mx-auto"%> 
@@ -20,7 +20,7 @@
                <%=image_tag diary.image.variant(resize: '176x176'), class:" w-32 lg:w-44 md:w-32 sm:w-28 mx-auto"%>
           <% end %>
         <div class=" text-right">
-        <%=link_to "編集",edit_diary_path(diary.id),id:'diary-edit',class: ' text-base pr-8 font-sans lg:pr-3 lg:text-sm hover:underline'%>
+        <%=link_to "編集",edit_diary_path(diary.id),id:'diary-edit',class: ' text-base pr-8 font-sans lg:pr-3 lg:text-sm md:text-xs md:pr-4 hover:underline'%>
         </div>
       </div>
     <% end %>
