@@ -19,19 +19,21 @@
     <%= flash[:alert] %>
   </div>
   <div class="flex flex-col pt-4">
-      <label class="mb-1 text-xs tracking-wide text-gray-600" for="email">メールアドレス</label>
+      <label class="mb-1 text-xs tracking-wide text-gray-600" for="email">メールアドレス:</label>
     <%= f.email_field :email, class:"shadow appearance-none border rounded w-full py-2 px-3 bg-yellow-50 mt-1 leading-tight focus:outline-none focus:shadow-outline", id:"email", placeholder:"PC・携帯どちらでも可", autofocus: true %>
   </div>
   <div class="flex flex-col pt-4">
-      <label class="mb-1 text-xs tracking-wide text-gray-600" for="password">パスワード</label>
-    <%= f.password_field :password, class:"shadow appearance-none border rounded w-full py-2 px-3 bg-yellow-50 mt-1 leading-tight focus:outline-none focus:shadow-outline", id:"password", placeholder:"" %>
+      <label class="mb-1 text-xs tracking-wide text-gray-600" for="password">パスワード: </label>    
+    <%= f.password_field :password, class:"shadow appearance-none border rounded w-full py-2 px-3 bg-yellow-50 mt-1 leading-tight focus:outline-none focus:shadow-outline", id:"password", placeholder:"6文字以上の半角英数字" %>
+    <div class="flex text-xs pl-2 mt-2">※パスワードを忘れた方は<%= link_to 'こちら',  new_user_password_path, class:'hover:underline text-red-400'%></div> 
+
   </div>
    <div class='flex w-full'>
-     <%= f.submit "Create Account", class: 'flex mt-8 items-center justify-center focus:outline-none text-black text-sm  sm:text-base  bg-yellow-50  hover:bg-yellow-500 rounded-2xl py-2 w-full transition duration-150 ease-in  uppercase cursor-pointer'%>
+     <%= f.submit "login", class: 'flex mt-8 items-center justify-center focus:outline-none text-black text-sm  sm:text-base  bg-yellow-50  hover:bg-yellow-500 rounded-2xl py-2 w-full transition duration-150 ease-in  uppercase cursor-pointer'%>
     </div>
-    <div class="text-xs pt-10 pl-2 sm:pl-8 sm:pt-12 sm:pb-12 flex">
+    <div class=" pt-10 pl-2 sm:pl-8 sm:text-base sm:pt-12 sm:pb-12 flex">
         まだアカウントを持ってない方は
-        <div class =" underline decoration-rose-700">
+        <div class =" hover:underline text-red-400">
         <%=link_to "こちら",new_user_registration_path %>
         </div>
         から。

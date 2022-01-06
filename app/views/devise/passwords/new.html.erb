@@ -1,30 +1,35 @@
+ <%= render "diaries/header" %>
 
-<%= form_with model: @user, url: user_password_path, class: 'registration-main', local: true do |f| %>
-<div class='form-wrap'>
-  <div class='form-header'>
-    <h1 class='form-header-text'>
+ <div class="text-lg  text-center pb-6 pt-6 bg-gray-50">
+    再設定の部屋です
+</div>
+
+
+<%= form_with model: @user, url: user_password_path, class: 'relative  flex flex-col pt-2 bg-gray-50', local: true do |f| %>
+<div class='min-h-screen flex flex-col items-center justify-center bg-gray-50'>
+  <div class='flex flex-col w-4/5 shadow-md px-4 sm:px-6 md:px-8 lg:px-10 py-8 rounded-xl w-full max-w-3xl bg-gray-200'>
+    <h1 class=' font-light self-center  text-3xl'>
       パスワード再設定
     </h1>
-  </div>
+    <div class='text-center pb-10'>
+      入力されたメールアドレスにパスワード再設定メールを送信します
+    </div>
+  
 
-  <%# エラーメッセージの出力 %>
   <%= render 'shared/error_messages', model: f.object %>
 
   <div class="form-group">
     <div class='form-text-wrap'>
-      <label class="form-text">メールアドレス</label>
-      <span class="indispensable">必須</span>
+      <label class="">メールアドレス:</label>
     </div>
-    <%= f.email_field :email, class:"input-default", id:"email", placeholder:"PC・携帯どちらでも可", autofocus: true %>
+    <%= f.email_field :email, class:"shadow appearance-none border rounded w-full py-2 px-3 bg-gray-50 mt-1 leading-tight focus:outline-none focus:shadow-outline", id:"email", placeholder:"登録したメールアドレスを入力してください", autofocus: true %>
   </div>
   <div class="form-group">
-    <h2 class='form-bottom-text'>
-      入力されたメールアドレスにパスワード再設定メールを<br>送信します
-    </h2>
   </div>
-  <div class='register-btn'>
-    <%= f.submit "会員登録" ,class:"register-red-btn" %>
+  <div class='text-center pt-10'>
+    <%= f.submit "送信する" ,class:" flex mt-8 items-center justify-center focus:outline-none text-black text-sm  sm:text-base  bg-gray-50  hover:bg-gray-500 rounded-2xl py-2 w-full transition duration-150 ease-in  uppercase cursor-pointer " %>
   </div>
 </div>
 <% end %>
+</div>
 
