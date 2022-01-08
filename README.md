@@ -26,3 +26,12 @@
 ## Association
 
 - belongs_to :user
+
+## diaryテーブル
+
+
+| Column             | Type      | Option                             |
+| ------------------ | -----     | ------------------------------     |
+| memo               | text      | null: false                        |
+| genre_id           | integer   | null: false                        |
+
