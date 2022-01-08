@@ -27,7 +27,7 @@
 
 - belongs_to :user
 
-## diaryテーブル
+## contactテーブル
 
 
 | Column             | Type      | Option                             |
