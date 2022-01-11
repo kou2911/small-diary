@@ -48,6 +48,7 @@
 <div class = " absolute w-4/12 bottom-10 left-0 sm:bottom-2 sm:left-2 sm:w-48 sm:bottom-10 md:bg-yellow-200 rounded-full">
  <%=image_tag "cake.png"%>
  </div>
+ <%= link_to 'Googleでログイン', user_google_oauth2_omniauth_authorize_path, method: :post%>
 
 
 <% end %>

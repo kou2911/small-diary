@@ -62,3 +62,6 @@ gem 'rails-i18n'
 gem 'active_hash'
 gem 'pry-rails'
 gem "aws-sdk-s3", require: false
+gem 'omniauth-google-oauth2'
+gem "omniauth-rails_csrf_protection"
+gem 'omniauth', '~>1.9.1'
