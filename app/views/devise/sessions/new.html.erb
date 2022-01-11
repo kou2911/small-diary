@@ -31,6 +31,15 @@
    <div class='flex w-full'>
      <%= f.submit "login", class: 'flex mt-8 items-center justify-center focus:outline-none text-black text-sm  sm:text-base  bg-yellow-50  hover:bg-yellow-500 rounded-2xl py-2 w-full transition duration-150 ease-in  uppercase cursor-pointer'%>
     </div>
+
+     <div class="flex flex-row justify-center my-5 ">
+               --- or sign-in with ---
+      </div>
+      <!-- alternate sign-in -->  
+      <div class="flex flex-row gap-2">
+        <%= link_to "Googleでログイン", user_google_oauth2_omniauth_authorize_path, class: 'bg-green-500 text-white w-full p-2 flex flex-row justify-center gap-2 items-center rounded-sm hover:bg-green-600 duration-100 ease-in-out rounded-md' ,method: :post%>
+      </div>  
+
     <div class=" pt-10 pl-2 sm:pl-8 sm:text-base sm:pt-12 sm:pb-12 flex">
         まだアカウントを持ってない方は
         <div class =" hover:underline text-red-400">
@@ -48,7 +57,6 @@
 <div class = " absolute w-4/12 bottom-10 left-0 sm:bottom-2 sm:left-2 sm:w-48 sm:bottom-10 md:bg-yellow-200 rounded-full">
  <%=image_tag "cake.png"%>
  </div>
- <%= link_to 'Googleでログイン', user_google_oauth2_omniauth_authorize_path, method: :post%>
 
 
 <% end %>
