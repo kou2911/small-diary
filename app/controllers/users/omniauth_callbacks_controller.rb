@@ -4,6 +4,9 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
     authorization
    end
   
+   def twitter
+    authorization
+   end
    private
   
    def authorization
