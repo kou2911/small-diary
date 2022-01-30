@@ -3,8 +3,8 @@
  <div class=" pl-4 pb-2  sm:text-lg sm:pb-10 sm:pt-6 text-xs pb-10 pt-6  text-center bg-yellow-50  ">
     <%=link_to "小さな思い出を日記にしませんか?", about_diaries_path%>
  </div>
-
-<div class="bg-yellow-50 h-full">
+ 
+<div class="bg-yellow-50 h-full pb-10">
  <div  class=" relative  bg-yellow-200 m-auto w-9/12 rounded-full">
    <%=image_tag "cat_girl.png"%>
 
@@ -17,10 +17,6 @@
 
 </div>
 
-<div class="h-16 grid grid-cols-3 gap-4 content-center text-center bg-yellow-200 ">
-<%=link_to '利用規約', terms_diaries_path%>
-<%=link_to'プライバシーポリシー' ,privacy_diaries_path%>
-<%= link_to "お問い合わせ" ,new_contact_path %>
-</div>
+<%= render "footer" %>
 
 

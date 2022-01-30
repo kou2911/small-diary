@@ -10,6 +10,7 @@ require("channels")
 require('jquery')
 require("../menu")
 require("../count")
+require("../num")
 
 
 

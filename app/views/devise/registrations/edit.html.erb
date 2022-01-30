@@ -8,7 +8,7 @@
         <div class='min-h-screen flex flex-col items-center justify-center bg-gray-50 '>
           <div class="flex flex-col bg-gray-200 w-4/5 shadow-md px-4 sm:px-6 md:px-8 lg:px-10 py-8 rounded-xl w-50 max-w-md">
              <div class=" font-light self-center mb-8 text-3xl">
-                account edit
+                Account Edit
              </div>
               <%= render 'shared/error_messages', model: f.object %>
                  <div class="flex flex-col pt-4">
@@ -37,7 +37,7 @@
            </div>
         </div>
     <% end %>
-    <div class="h-16 grid grid-cols-3 gap-4 content-center text-center bg-gray-200 ">
+    <div class="h-16 grid grid-cols-3 gap-4 content-center text-center bg-gray-100 text-gray-500 ">
        <%=link_to '利用規約', terms_diaries_path%>
        <%=link_to'プライバシーポリシー' ,privacy_diaries_path%>
        <%= link_to "お問い合わせ" ,new_contact_path %>
