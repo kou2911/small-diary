@@ -1,4 +1,4 @@
-<div class = "bg-yellow-50 w-screen">
+<div class = "bg-yellow-50 ">
  <div class ="toggle" id="toggle">
     <div class ="toggle-box" id="toggle-box">
         <span></span>
@@ -26,7 +26,8 @@
         </ul>
     </nav>
  </div>
- <div class=" font-mono fixed py-6 pl-3 text-xs sm:text-xl sm:fixed x-40" id="main">
+ <div class="flex font-mono z-10 fixed py-6 pl-3 text-xs sm:text-xl sm:fixed x-40" id="main">
+   <%=image_tag "logo.png",class: 'w-10 pb-5'%>
    <%=link_to "small-diary" ,root_path  %>  
   </div>
 </div>

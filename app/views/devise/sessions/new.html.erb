@@ -7,7 +7,7 @@
 
 
 <%= form_with model:@user, url: user_session_path, class: 'relative  flex flex-col pt-2 bg-yellow-50', local: true do |f| %>
-<div class='min-h-screen flex flex-col items-center justify-center bg-yellow-50 '>
+ <div class='min-h-screen flex flex-col items-center justify-center bg-yellow-50 '>
   <div class="flex flex-col bg-yellow-200 w-4/5 shadow-md px-4 sm:px-6 md:px-8 lg:px-10 py-8 rounded-3xl w-50 max-w-md">
 
  <div class=" font-light self-center mb-8 text-3xl">
@@ -50,13 +50,14 @@
 
   </div>
 
-</div>
-<div class="absolute w-4/12 top-24 right-2 sm:top-10  sm:right-18 sm:w-48 md:bg-yellow-200 rounded-full">
- <%=image_tag "atm.png"%>
-</div>
-<div class = " absolute w-4/12 bottom-10 left-0 sm:bottom-2 sm:left-2 sm:w-48 sm:bottom-10 md:bg-yellow-200 rounded-full">
- <%=image_tag "cake.png"%>
  </div>
+   <div class="absolute w-4/12 top-24 right-2 sm:top-10  sm:right-18 sm:w-48 md:bg-yellow-200 rounded-full">
+     <%=image_tag "atm.png"%>
+   </div>
+  <div class = " absolute w-4/12 bottom-10 left-0 sm:bottom-2 sm:left-2 sm:w-48 sm:bottom-10 md:bg-yellow-200 rounded-full">
+     <%=image_tag "cake.png"%>
+  </div>
 
 
 <% end %>
+<%= render "diaries/footer" %>

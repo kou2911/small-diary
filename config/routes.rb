@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   resources :diaries do
     collection do
       get 'about'
+      get 'privacy'
+      get 'terms'
     end
   end
 
