@@ -10,8 +10,8 @@ module ApplicationHelper
       canonical: request.original_url,  
       noindex: ! Rails.env.production?,
       icon: [
-        { image: image_url('images/logo.png') },
-        { image: image_url('images/logo.png'), rel: 'apple-touch-icon', sizes: '180x180', type: 'image/png' },
+        { href: image_url('/assets/logo.png') },
+        { fref: image_url('/assets//logo.png'), rel: 'apple-touch-icon', sizes: '180x180', type: 'image/png' },
       ],
       og: {
         site_name: 'Small-diary',
@@ -19,7 +19,7 @@ module ApplicationHelper
         description: '日記が苦手な人でも大丈夫。あなたが書くのは一言だけ、今日の小さな思い出を一言にするだけ。', 
         type: 'website',
         url: request.original_url,
-        image: image_url('images/logo.png'),
+        image: image_url('/assets/logo.png'),
         locale: 'ja_JP',
       },
     }
