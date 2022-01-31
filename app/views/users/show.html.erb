@@ -5,6 +5,7 @@
  <div class="lg:text-lg lg:pb-10 lg:pt-6 text-xs pb-10 pt-6  text-center bg-yellow-50">
     <%="ここが#{@nickname}さんの日記です"%>
  </div>
+ <%= flash[:notice] %>
 <div class="bg-yellow-50 h-screen">
   <ul class=" p-8 grid grid-cols-1  lg:grid-cols-5 lg:gap-5 bg-yellow-50  md:grid-cols-4 md:gap-4 sm:grid-cols-3 sm:gap-3">
     <% @diaries.each do |diary| %>

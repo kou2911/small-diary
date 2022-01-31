@@ -12,6 +12,7 @@ class DiariesController < ApplicationController
   def create
     @diary = Diary.new(diary_params)
     if @diary.save
+      flash[:notice] = "登録が完了しました。"
       redirect_to user_path(current_user.id)
     else
       render :new
