@@ -6,7 +6,7 @@
 このアプリケーションは日記をお手軽に付けることができるものです。<br> 日記のルールとして投稿できる文字数は15文字以内となっています。<br><br>
 
 # 本番環境
-https://small-diary2911.herokuapp.com/
+https://www.small-diary.com/
 
 ログイン情報(テスト用)<br>
 ・Eメール:test@gmail.com<br>
