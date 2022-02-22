@@ -4,7 +4,7 @@ class UsersController < ApplicationController
 
   def show
     @nickname = current_user.nickname
-    @diaries = current_user.diaries
+    @diaries = current_user.diaries.page(params[:page]).per(10)
   end
 
   def edit

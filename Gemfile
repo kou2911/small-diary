@@ -67,3 +67,4 @@ gem 'omniauth-twitter'
 gem "omniauth-rails_csrf_protection"
 gem 'omniauth', '~>1.9.1'
 gem 'meta-tags'
+gem 'kaminari'
